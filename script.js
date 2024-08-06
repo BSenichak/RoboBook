@@ -2,6 +2,7 @@ let load = false;
 let page = 1;
 let query = "the+lord+of+the+rings";
 let pages = 0;
+localStorage.setItem("fbooks", JSON.stringify([]));
 
 async function getBooks() {
     const url = `https://openlibrary.org/search.json?q=${query}&page=${page}&limit=10`;
